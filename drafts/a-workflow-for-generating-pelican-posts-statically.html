@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Metas -->
+    <meta charset="utf-8">
+    <title>A Workflow for Generating Pelican Posts Statically | shaenr</title>
+    <meta content="One of the first things you find yourself asking when you start a new static site post is “What’s the date right now?” and “What should I name this file?” This is a solutution to handle that problem using Pelican and …" name="description">
+    <meta content="shaenr" name="author">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<!-- Twitter Cards and Open Graph -->
+<meta content="summary" name="twitter:card">
+<!-- 	<meta name="twitter:creator" content=""> -->
+<meta content="shaenr.github.io" name="twitter:domain">
+<!-- 	<meta name="twitter:site" content=""> -->
+<meta content="A Workflow for Generating Pelican Posts Statically" property="og:title">
+<meta content="One of the first things you find yourself asking when you start a new static site post is “What’s the date right now?” and “What should I name this file?” This is a solutution to handle that problem using Pelican and …" property="og:description">
+<meta content="../images/icons/avatar.png" property="og:image">
+<meta content="article" property="og:type">
+<meta content="../drafts/a-workflow-for-generating-pelican-posts-statically.html" property="og:url">
+
+    <!-- Stylesheets and Web Fonts -->
+    <link href="/theme/style.min.css" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css"
+          integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link href="/images/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <meta content="#FF8000" name="theme-color">
+    <meta content="#FF8000" name="msapplication-TileColor">
+
+    <!--[if lt IE 9]>
+    <script src="/theme/js/html5shiv.min.js"></script>
+    <script src="/theme/js/respond.min.js"></script><![endif]-->
+</head>
+
+<body>
+<div class="container">
+    <aside>
+        <a href="/"><img alt="Site Avatar" id="avatar" src="/images/icons/avatar.png"></a>
+        <div id="name"><a href="/">shaenr</a></div>
+        <div id="bio">Python/JavaScript<br>Command Line Cowboy<br>San Antonio, TX</div>
+
+        <div id="sidebar-links">
+
+            <a href="/">Home</a>&nbsp;|&nbsp;<a href="/archive/">Archive</a>
+
+        </div>
+
+        <div id="social">
+            <a class="icon fa fa-feed" href="/atom.xml" title="Atom Feed"></a>
+            <a class="icon fa fa-github" href="https://github.com/shaenr" title="GitHub"></a>
+            <a class="icon fa fa-mastodon" href="https://hackers.town/@shaen" title="Mastodon"></a>
+            <a class="icon fa fa-share" href="https://divsel.neocities.org" title="Neocities"></a>
+        </div>
+
+        <hr id="sidebar-divider">
+    </aside>
+
+    <article>
+<h1 class="title"><a href="/drafts/a-workflow-for-generating-pelican-posts-statically.html" title="Permalink to A Workflow for Generating Pelican Posts Statically">A Workflow for Generating Pelican Posts&nbsp;Statically</a></h1>
+<time class="date" datetime="2022-03-08 01:33:00-06:00">March 08, 2022</time>
+<div class="content">
+    <p>One of the first things you find yourself asking when you start a new static site post is &#8220;What&#8217;s the date right now?&#8221; and &#8220;What should I name this file?&#8221; This is a solutution to handle that problem using <a href="https://blog.getpelican.com/">Pelican</a> and&nbsp;Python.</p>
+<hr>
+<p>The following metadata completely generates the <a href="../../../2022/02/another-page-to-write-and-also-not-write/">previous page</a>. </p>
+<div class="codehilite"><pre><span></span><code><span class="n">Date</span><span class="o">:</span> <span class="mi">2022</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">25</span> <span class="mi">07</span><span class="o">:</span><span class="mi">54</span>
+<span class="n">Title</span><span class="o">:</span> <span class="n">Another</span> <span class="n">Place</span> <span class="n">to</span> <span class="n">Write</span> <span class="n">and</span>  <span class="n">Not</span> <span class="n">Write</span>
+<span class="n">Slug</span><span class="o">:</span> <span class="n">another</span><span class="o">-</span><span class="n">page</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">write</span><span class="o">-</span><span class="n">and</span><span class="o">-</span><span class="n">also</span><span class="o">-</span><span class="n">not</span><span class="o">-</span><span class="n">write</span>
+<span class="n">Category</span><span class="o">:</span> <span class="n">Introspection</span>
+<span class="n">Author</span><span class="o">:</span> <span class="n">shaenr</span>
+<span class="n">Tags</span><span class="o">:</span> <span class="n">vaporwave</span><span class="o">,</span> <span class="n">divselector</span><span class="o">,</span> <span class="n">self</span>
+
+<span class="n">I</span> <span class="n">have</span> <span class="n">a</span> <span class="n">tendency</span> <span class="n">to</span><span class="o">...</span>
+</code></pre></div>
+
+
+<p>This is a good start to automating posts, but there is a lot of work being done&nbsp;here.</p>
+<hr>
+<h3>Pulling the Default Date from the File&nbsp;System</h3>
+<p>The only metadata required by pelicanis <code>Title:</code> Even date can be omitted because there is a setting (<code>DEFAULT_DATE = 'fs'</code>) to pull the default date from the file system. The main problem with this is that the dates of your posts will depends on the system they are currently&nbsp;on. </p>
+<p>This could easily result in re-generating the site and destroying all your dates, which is pretty important context in a blog post if you&#8217;re not a scumbag web marketer who wants to <em>appear</em> relevant more than <em>be</em> relevant. (<strong><span class="caps">DATE</span> <span class="caps">YOUR</span> <span class="caps">CONTENT</span>!</strong>)</p>
+<p>&#8230;ahem&#8230;</p>
+<p>## PostDate&nbsp;Class</p>
+<p>Let&#8217;s write a class for handling the dates and a class the new&nbsp;posts.</p>
+<div class="codehilite"><pre><span></span><code> <span class="k">class</span> <span class="nc">PostDate</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">date</span> <span class="o">=</span> <span class="n">date</span> <span class="k">if</span> <span class="n">date</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">modified</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output_meta_str</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_output_metadata_str</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;created: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">format_datetime</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">modified</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> \
+            <span class="sa">f</span><span class="s2">&quot;created: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">format_datetime</span><span class="p">()</span><span class="si">}</span><span class="s2">, modified: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">format_datetime</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">modified</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">handle_modified_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_mod</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Pass the str &quot;init&quot; to clear modified time.</span>
+<span class="sd">        Pass the str &quot;now&quot; to set new modified time to now.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">new_mod</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="k">if</span> <span class="n">new_mod</span> <span class="o">==</span> <span class="s2">&quot;now&quot;</span> <span class="k">else</span> <span class="n">new_mod</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">modified</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="n">new_mod</span> <span class="o">==</span> <span class="s2">&quot;init&quot;</span> <span class="k">else</span> <span class="n">new_mod</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_format_time</span><span class="p">(</span><span class="n">time</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Use format_datetime()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{:02d}</span><span class="s2">:</span><span class="si">{:02d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_format_date</span><span class="p">(</span><span class="n">date</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Use format_datetime()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># return f&quot;{date.year}-{date.month}-{date.day}&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{:04d}</span><span class="s2">-</span><span class="si">{:02d}</span><span class="s2">-</span><span class="si">{:02d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">date</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">date</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">date</span><span class="o">.</span><span class="n">day</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">format_datetime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mod_date</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        To add a modified date, pass mod_date = self.modified</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_format_date</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">date</span><span class="p">())</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_format_time</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">time</span><span class="p">())</span><span class="si">}</span><span class="s2">&quot;</span> \
+            <span class="k">if</span> <span class="n">mod_date</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_format_date</span><span class="p">(</span><span class="n">mod_date</span><span class="o">.</span><span class="n">date</span><span class="p">())</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_format_time</span><span class="p">(</span><span class="n">mod_date</span><span class="o">.</span><span class="n">time</span><span class="p">())</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="k">def</span> <span class="nf">get_output_metadata_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Date: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">format_datetime</span><span class="p">()</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="n">d</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">modified</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> \
+            <span class="n">d</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;Modified: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">format_datetime</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">modified</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+</code></pre></div>
+</div>
+
+
+        <hr>
+    </article>
+
+    <footer>
+        <p>This site is statically generated with Python.</p>
+    </footer>
+</div>
+
+
+</body>
+</html>
