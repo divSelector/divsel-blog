@@ -79,7 +79,7 @@
 <span class="k">def</span> <span class="nf">get_response</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="n">html</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">get_headers</span><span class="p">())</span>
     <span class="n">html</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>  <span class="c1"># This is simple HTTP error handling.</span>
-    <span class="k">return</span> <span class="n">html</span>
+    <span class="k">return</span> <span class="n">html</span><span class="o">.</span><span class="n">content</span>
 </code></pre></div>
 
 
