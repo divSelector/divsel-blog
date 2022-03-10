@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Metas -->
+    <meta charset="utf-8">
+    <title>Converting the Site to Pelican | shaenr</title>
+    <meta content="Moving this page over to using Pelican has been a long time coming. Though it might appear that this is a first post, this GitHub page has already seen a few iterations. Sometime last year, after spending a lot of time reading …" name="description">
+    <meta content="shaenr" name="author">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<!-- Twitter Cards and Open Graph -->
+<meta content="summary" name="twitter:card">
+<!-- 	<meta name="twitter:creator" content=""> -->
+<meta content="shaenr.github.io" name="twitter:domain">
+<!-- 	<meta name="twitter:site" content=""> -->
+<meta content="Converting the Site to Pelican" property="og:title">
+<meta content="Moving this page over to using Pelican has been a long time coming. Though it might appear that this is a first post, this GitHub page has already seen a few iterations. Sometime last year, after spending a lot of time reading …" property="og:description">
+<meta content="../../../images/icons/avatar.png" property="og:image">
+<meta content="article" property="og:type">
+<meta content="../../../2020/05/convert-pelican/" property="og:url">
+
+    <!-- Stylesheets and Web Fonts -->
+    <link href="/theme/style.min.css" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css"
+          integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link href="/images/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <meta content="#FF8000" name="theme-color">
+    <meta content="#FF8000" name="msapplication-TileColor">
+
+    <!--[if lt IE 9]>
+    <script src="/theme/js/html5shiv.min.js"></script>
+    <script src="/theme/js/respond.min.js"></script><![endif]-->
+</head>
+
+<body>
+<div class="container">
+    <aside>
+        <a href="/"><img alt="Site Avatar" id="avatar" src="/images/icons/avatar.png"></a>
+        <div id="name"><a href="/">shaenr</a></div>
+        <div id="bio">Python/JavaScript<br>Command Line Cowboy<br>San Antonio, TX</div>
+
+        <div id="sidebar-links">
+
+            <a href="/">Home</a>&nbsp;|&nbsp;<a href="/archive/">Archive</a>
+
+        </div>
+
+        <div id="social">
+            <a class="icon fa fa-feed" href="/atom.xml" title="Atom Feed"></a>
+            <a class="icon fa fa-github" href="https://github.com/shaenr" title="GitHub"></a>
+            <a class="icon fa fa-mastodon" href="https://hackers.town/@shaen" title="Mastodon"></a>
+            <a class="icon fa fa-share" href="https://divsel.neocities.org" title="Neocities"></a>
+        </div>
+
+        <hr id="sidebar-divider">
+    </aside>
+
+    <article>
+<h1 class="title"><a href="/2020/05/convert-pelican/" title="Permalink to Converting the Site to Pelican">Converting the Site to&nbsp;Pelican</a></h1>
+<time class="date" datetime="2020-05-12 00:00:00-05:00">May 12, 2020</time>
+<div class="content">
+    <p>Moving this page over to using Pelican has been a long time coming. Though it might appear that this is a first post, this GitHub page has already seen a few&nbsp;iterations.</p>
+<p>Sometime last year, after spending a lot of time reading programming books, I set out to write my first real program, simpai-spg, which was supposed to be a simple static page generator written in&nbsp;python3. </p>
+<p>The primary motivation for writing it was that I had been working on a design <a href="../../../other/virulence.html">virulence.css</a>, which was a fork of <a href="https://hale.su/serenity.html">serenity.scss</a>, and ultimately, I couldn&#8217;t figure out how to easily use it as a&nbsp;theme.</p>
+<p>At the time, I didn&#8217;t know what a templating engine was, let alone how to write jinja2. I suppose using Pelican seemed a lot more complicated to me than it needed to be. I felt like, &#8220;I already know <span class="caps">HTML</span>, I already know <span class="caps">CSS</span>, why do I have to learn this program to abstract away from it as much as&nbsp;possible?&#8221;</p>
+<h3>Failings of&nbsp;Simpai</h3>
+<p>It wasn&#8217;t as simple to assemble my content the way I imagined it would be. And though the first version worked, it truly was a &#8220;simple&#8221; page generator. It took the text from your post and inserted it into a page. It took every post and listed it with articles. The pagination worked in the end. And it was all strung together with <code>string.Template</code>.</p>
+<p>The primary problem with the program was that&#8230; it could only generate one post at a time through an executable <code>new_post.py</code>, after which point, it would never be able to generate the page again. After that point, I started saving the data into json to solve this problem, but it was clearly going to become a very not-maintainable project upon getting&nbsp;bigger.</p>
+<p>The end result of building simpai-spg was that, the moment I wanted to add some feature to my site design, the entire thing broke. I planned a new version each time I changed the design, and each time, the automated process of building the site broke. Eventually I stopped using it and I started updating pages manually. And very quickly after that, I quit writing posts, because they were no longer being automated into&nbsp;pages.</p>
+<p>It was entirely too simple to be useful, but it taught me a&nbsp;lot.</p>
+<h3>Two Things I&nbsp;Learned</h3>
+<p>You need to do better research before you begin a&nbsp;project.</p>
+<ol>
+<li>There are libs out there that will solve the problem you have already. Search for&nbsp;them.</li>
+<li>There are projects out there that have extensively covered the problem you have already. Use them before trying to improve&nbsp;them.</li>
+</ol>
+<h3>Moving&nbsp;Forward</h3>
+<p>Looking back over virulence.css: While it may have taught me to write my own <span class="caps">CSS</span> without bootstrap, it was a kind of a huge mess. The fonts were overzealous and often clashing. The spacing and general typography settings were not very professional. The colors were pretty. And that&#8217;s about what it had going for&nbsp;it.</p>
+<p>Moving forward, I are using <a href="https://github.com/getpelican/pelican">Pelican</a> and <a href="https://github.com/iKevinY/pneumatic">pneumatic</a>. It&#8217;s possible that at some point I will give my own generator/theme another shot, but I won&#8217;t be doing it until I&#8217;ve got a much better understanding of how this tool works, what its failings are, and what is worth taking the time to improve about&nbsp;it.</p>
+<h2>Don&#8217;t start from the bottom for the sake of&nbsp;it.</h2>
+<p>Unless you have some fundamental lessons to learn, there&#8217;s a better way.
+That being said, there is no better way than failure to learn those fundamental&nbsp;things.</p>
+</div>
+
+<div id="related-articles">
+    <a href="/2020/05/client-side-user-input/" id="next-neighbour">&laquo; Anything From the Client Side is User Input</a>
+</div>
+
+        <hr>
+    </article>
+
+    <footer>
+        <p>This site is statically generated with Python.</p>
+    </footer>
+</div>
+
+
+</body>
+</html>
