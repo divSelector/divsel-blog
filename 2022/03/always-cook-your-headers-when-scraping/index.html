@@ -1,69 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Basic Metas -->
-    <meta charset="utf-8">
-    <title>Always Cook Your Headers When Scraping! | shaenr</title>
-    <meta content="Simple snippet to use in any web request from the command line" name="description">
-    <meta content="shaenr" name="author">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-<!-- Twitter Cards and Open Graph -->
-<meta content="summary" name="twitter:card">
-<!-- 	<meta name="twitter:creator" content=""> -->
-<meta content="shaenr.github.io" name="twitter:domain">
-<!-- 	<meta name="twitter:site" content=""> -->
-<meta content="Always Cook Your Headers When Scraping!" property="og:title">
-<meta content="Simple snippet to use in any web request from the command line" property="og:description">
-<meta content="../../../images/icons/avatar.png" property="og:image">
-<meta content="article" property="og:type">
-<meta content="../../../2022/03/always-cook-your-headers-when-scraping/" property="og:url">
+	<!-- Basic Metas -->
+	<meta charset="utf-8">
+	<title>Always Cook Your Headers When Scraping! | shaenr</title>
+	<meta name="description" content="I’m going to try to make a habit of sharing snippets I end up using a lot. This is a pretty basic snippet where you should start when you’re sending web requests from the command line and you need the …">
+	<meta name="author" content="shaenr">
+	<link rel="author" href=""/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Stylesheets and Web Fonts -->
-    <link href="/theme/style.min.css" rel="stylesheet">
-    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css"
-          integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" rel="stylesheet">
+	<!-- Twitter Cards and Open Graph -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:creator" content="">
+	<meta name="twitter:domain" content="shaenr.github.io">
+	<meta name="twitter:site" content="">
+	<meta property="og:title" content="Always Cook Your Headers When Scraping!">
+	<meta property="og:description" content="I’m going to try to make a habit of sharing snippets I end up using a lot. This is a pretty basic snippet where you should start when you’re sending web requests from the command line and you need the …">
+	<meta property="og:image" content="../../../images/icons/avatar.png">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="../../../2022/03/always-cook-your-headers-when-scraping/">
 
-    <!-- Favicons -->
-    <link href="/images/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-    <link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-    <link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-    <meta content="#FF8000" name="theme-color">
-    <meta content="#FF8000" name="msapplication-TileColor">
+	<!-- Stylesheets and Web Fonts -->
+	<link href="/theme/style.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!--[if lt IE 9]>
-    <script src="/theme/js/html5shiv.min.js"></script>
-    <script src="/theme/js/respond.min.js"></script><![endif]-->
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/images/icons/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="/images/icons/favicon-32x32.png" sizes="32x32">
+	<meta name="theme-color" content="">
+
+	<meta name="msapplication-TileColor" content="">
+	<meta name="msapplication-TileImage" content="/images/icons/mstile-144x144.png">
+	<meta name="msapplication-square70x70logo" content="/images/icons/mstile-small.png">
+	<meta name="msapplication-square150x150logo" content="/images/icons/mstile-medium.png">
+	<meta name="msapplication-wide310x150logo" content="/images/icons/mstile-wide.png">
+	<meta name="msapplication-square310x310logo" content="/images/icons/mstile-large.png">
+
+	<!--[if lt IE 9]>
+	<script src="/theme/js/html5shiv.min.js"></script>
+	<script src="/theme/js/respond.min.js"></script>
+	<![endif]-->
 </head>
 
 <body>
-<div class="container">
-    <aside>
-        <a href="/"><img alt="Site Avatar" id="avatar" src="/images/icons/avatar.png"></a>
-        <div id="name"><a href="/">shaenr</a></div>
-        <div id="bio">Python/JavaScript<br>Command Line Cowboy<br>San Antonio, TX</div>
+	<div class="container">
+		<aside>
+			<a href="/"><img id="avatar" alt="Site Avatar" src="/images/icons/avatar.png"></a>
+			<div id="name"><a href="/">shaenr</a></div>
+			<div id="bio">Python/JavaScript<br>Command Line Cowboy<br>San Antonio, TX</div>
 
-        <div id="sidebar-links">
+			<div id="sidebar-links">
+				<a href="/">Home</a>&nbsp;|&nbsp;<a href="/archive/">Archive</a>
+			</div>
 
-            <a href="/">Home</a>&nbsp;|&nbsp;<a href="/archive/">Archive</a>
+			<div id="social">
+				<a href="/atom.xml" title="Atom Feed" class="icon fa fa-feed"></a>
+				<a href="https://github.com/shaenr" title="GitHub" class="icon fa fa-github"></a>
+				<a href="https://hackers.town/@shaen" title="Mastodon" class="icon fa fa-mastodon"></a>
+				<a href="https://divsel.neocities.org" title="Neocities" class="icon fa fa-share"></a>
+			</div>
 
-        </div>
+			<hr id="sidebar-divider">
+		</aside>
 
-        <div id="social">
-            <a class="icon fa fa-feed" href="/atom.xml" title="Atom Feed"></a>
-            <a class="icon fa fa-github" href="https://github.com/shaenr" title="GitHub"></a>
-            <a class="icon fa fa-mastodon" href="https://hackers.town/@shaen" title="Mastodon"></a>
-            <a class="icon fa fa-share" href="https://divsel.neocities.org" title="Neocities"></a>
-        </div>
-
-        <hr id="sidebar-divider">
-    </aside>
-
-    <article>
-<h1 class="title"><a href="/2022/03/always-cook-your-headers-when-scraping/" title="Permalink to Always Cook Your Headers When Scraping!">Always Cook Your Headers When&nbsp;Scraping!</a></h1>
-<time class="date" datetime="2022-03-08 01:54:00-06:00">March 08, 2022</time>
-<div class="content">
-    <p>I&#8217;m going to try to make a habit of sharing snippets I end up using a&nbsp;lot.</p>
-<p>This is a pretty basic snippet where you should start when you&#8217;re sending web requests from the command line and you need the output to be reflecting of what you would be looking at from a&nbsp;browser.</p>
+		<article>
+	<h1 class="title"><a href="/2022/03/always-cook-your-headers-when-scraping/" title="Permalink to Always Cook Your Headers When Scraping!">Always Cook Your Headers When&nbsp;Scraping!</a></h1>
+	<time class="date" datetime="2022-03-08 00:00:00-06:00">March 08, 2022</time>
+	<div class="content">
+		<p>I&#8217;m going to try to make a habit of sharing snippets I end up using&nbsp;a&nbsp;lot.</p>
+<p>This is a pretty basic snippet where you should start when you&#8217;re sending web requests from the command line and you need the output to be reflecting of what you would be looking at from&nbsp;a&nbsp;browser.</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fake_useragent</span> <span class="kn">import</span> <span class="n">UserAgent</span>
 <span class="kn">import</span> <span class="nn">requests</span>
 
@@ -82,24 +88,24 @@
     <span class="k">return</span> <span class="n">html</span><span class="o">.</span><span class="n">content</span>
 </code></pre></div>
 
-
-<p>One thing to keep in mind when writing scrapers is that the <code>User-Agent</code> sent from the requests python3 module could potentially receive a response with different elements that have different attributes than the ones you are looking at in your browser as you are trying to figure out how to write&nbsp;selectors.</p>
+<p>One thing to keep in mind when writing scrapers is that the <code>User-Agent</code> sent from the requests python3 module could potentially receive a response with different elements that have different attributes than the ones you are looking at in your browser as you are trying to figure out how to&nbsp;write&nbsp;selectors.</p>
 <hr>
 <p>Don&#8217;t forget to install <a href="https://docs.python-requests.org/en/latest/">requests</a> and <a href="https://pypi.org/project/fake-useragent/">fake-useragent</a> using <code>pip install requests fake-useragent</code></p>
-</div>
+	</div>
 
-<div id="related-articles">
-    <a href="/2022/02/another-page-to-write-and-also-not-write/" id="prev-neighbour">Another Place to Write and Not Write
-        &raquo;</a>
-</div>
+	<div id="related-articles">
+		<a href="/2022/03/over-300-lines-of-logic-in-pelicanconfpy/" id="next-neighbour">&laquo; Permalink to Over 300 Lines of Logic in pelicanconf.py</a>
+		<a href="/2022/02/another-page-to-write-and-also-not-write/" id="prev-neighbour">Another Place to Write and Not Write &raquo;</a>
+	</div>
 
-        <hr>
-    </article>
 
-    <footer>
-        <p>This site is statically generated with Python.</p>
-    </footer>
-</div>
+			<hr>
+		</article>
+
+		<footer>
+			<p>This site is statically generated with Python.</p>
+		</footer>
+	</div>
 
 
 </body>

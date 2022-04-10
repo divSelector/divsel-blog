@@ -1,87 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Basic Metas -->
-    <meta charset="utf-8">
-    <title>Over 300 Lines of Logic in pelicanconf.py | shaenr</title>
-    <meta content="I wrote 297 lines of python code, extending a pelican static site generator implementation — this one actually. And I crammed all of it into my pelicanconf.py file. because that is the only way I could get it to work! This post has been brought to you by the general awareness that you realize over time: “god help me, this file is a mess.”" name="description">
-    <meta content="shaenr" name="author">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-<!-- Twitter Cards and Open Graph -->
-<meta content="summary" name="twitter:card">
-<!-- 	<meta name="twitter:creator" content=""> -->
-<meta content="shaenr.github.io" name="twitter:domain">
-<!-- 	<meta name="twitter:site" content=""> -->
-<meta content="Over 300 Lines of Logic in pelicanconf.py" property="og:title">
-<meta content="I wrote 297 lines of python code, extending a pelican static site generator implementation — this one actually. And I crammed all of it into my pelicanconf.py file. because that is the only way I could get it to work! This post has been brought to you by the general awareness that you realize over time: “god help me, this file is a mess.”" property="og:description">
-<meta content="../../../images/icons/avatar.png" property="og:image">
-<meta content="article" property="og:type">
-<meta content="../../../2022/03/over-300-lines-of-logic-in-pelicanconfpy/" property="og:url">
+	<!-- Basic Metas -->
+	<meta charset="utf-8">
+	<title>Permalink to Over 300 Lines of Logic in pelicanconf.py | shaenr</title>
+	<meta name="description" content="I wrote 297 lines of python code, extending a pelican static site generator implementation — this one actually. And I crammed all of it into my pelicanconf.py file. because that is the only way I could get it to work! This post …">
+	<meta name="author" content="shaenr">
+	<link rel="author" href=""/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Stylesheets and Web Fonts -->
-    <link href="/theme/style.min.css" rel="stylesheet">
-    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css"
-          integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" rel="stylesheet">
+	<!-- Twitter Cards and Open Graph -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:creator" content="">
+	<meta name="twitter:domain" content="shaenr.github.io">
+	<meta name="twitter:site" content="">
+	<meta property="og:title" content="Permalink to Over 300 Lines of Logic in pelicanconf.py">
+	<meta property="og:description" content="I wrote 297 lines of python code, extending a pelican static site generator implementation — this one actually. And I crammed all of it into my pelicanconf.py file. because that is the only way I could get it to work! This post …">
+	<meta property="og:image" content="../../../images/icons/avatar.png">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="../../../2022/03/over-300-lines-of-logic-in-pelicanconfpy/">
 
-    <!-- Favicons -->
-    <link href="/images/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-    <link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-    <link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-    <meta content="#FF8000" name="theme-color">
-    <meta content="#FF8000" name="msapplication-TileColor">
+	<!-- Stylesheets and Web Fonts -->
+	<link href="/theme/style.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!--[if lt IE 9]>
-    <script src="/theme/js/html5shiv.min.js"></script>
-    <script src="/theme/js/respond.min.js"></script><![endif]-->
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/images/icons/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="/images/icons/favicon-32x32.png" sizes="32x32">
+	<meta name="theme-color" content="">
+
+	<meta name="msapplication-TileColor" content="">
+	<meta name="msapplication-TileImage" content="/images/icons/mstile-144x144.png">
+	<meta name="msapplication-square70x70logo" content="/images/icons/mstile-small.png">
+	<meta name="msapplication-square150x150logo" content="/images/icons/mstile-medium.png">
+	<meta name="msapplication-wide310x150logo" content="/images/icons/mstile-wide.png">
+	<meta name="msapplication-square310x310logo" content="/images/icons/mstile-large.png">
+
+	<!--[if lt IE 9]>
+	<script src="/theme/js/html5shiv.min.js"></script>
+	<script src="/theme/js/respond.min.js"></script>
+	<![endif]-->
 </head>
 
 <body>
-<div class="container">
-    <aside>
-        <a href="/"><img alt="Site Avatar" id="avatar" src="/images/icons/avatar.png"></a>
-        <div id="name"><a href="/">shaenr</a></div>
-        <div id="bio">Python/JavaScript<br>Command Line Cowboy<br>San Antonio, TX</div>
+	<div class="container">
+		<aside>
+			<a href="/"><img id="avatar" alt="Site Avatar" src="/images/icons/avatar.png"></a>
+			<div id="name"><a href="/">shaenr</a></div>
+			<div id="bio">Python/JavaScript<br>Command Line Cowboy<br>San Antonio, TX</div>
 
-        <div id="sidebar-links">
+			<div id="sidebar-links">
+				<a href="/">Home</a>&nbsp;|&nbsp;<a href="/archive/">Archive</a>
+			</div>
 
-            <a href="/">Home</a>&nbsp;|&nbsp;<a href="/archive/">Archive</a>
+			<div id="social">
+				<a href="/atom.xml" title="Atom Feed" class="icon fa fa-feed"></a>
+				<a href="https://github.com/shaenr" title="GitHub" class="icon fa fa-github"></a>
+				<a href="https://hackers.town/@shaen" title="Mastodon" class="icon fa fa-mastodon"></a>
+				<a href="https://divsel.neocities.org" title="Neocities" class="icon fa fa-share"></a>
+			</div>
 
-        </div>
+			<hr id="sidebar-divider">
+		</aside>
 
-        <div id="social">
-            <a class="icon fa fa-feed" href="/atom.xml" title="Atom Feed"></a>
-            <a class="icon fa fa-github" href="https://github.com/shaenr" title="GitHub"></a>
-            <a class="icon fa fa-mastodon" href="https://hackers.town/@shaen" title="Mastodon"></a>
-            <a class="icon fa fa-share" href="https://divsel.neocities.org" title="Neocities"></a>
-        </div>
-
-        <hr id="sidebar-divider">
-    </aside>
-
-    <article>
-<h1 class="title"><a href="/2022/03/over-300-lines-of-logic-in-pelicanconfpy/" title="Permalink to Over 300 Lines of Logic in pelicanconf.py">Over 300 Lines of Logic in&nbsp;pelicanconf.py</a></h1>
-<time class="date" datetime="2022-03-09 18:16:00-06:00">March 09, 2022</time>
-<div class="content">
-    <p>I wrote 297 lines of python code, extending a pelican static site generator implementation &#8212; <em>this</em> one actually. And I crammed all of it into my <code>pelicanconf.py</code> file. because that is the only way I could get it to work! This post has been brought to you by the general awareness that you realize over time: &#8220;god help me, this file is a&nbsp;mess.&#8221;</p>
+		<article>
+	<h1 class="title"><a href="/2022/03/over-300-lines-of-logic-in-pelicanconfpy/" title="Permalink to Permalink to Over 300 Lines of Logic in pelicanconf.py">Permalink to Over 300 Lines of Logic in&nbsp;pelicanconf.py</a></h1>
+	<time class="date" datetime="2022-03-09 00:00:00-06:00">March 09, 2022</time>
+	<div class="content">
+		<p>I wrote 297 lines of python code, extending a pelican static site generator implementation &#8212; <em>this</em> one actually. And I crammed all of it into my <code>pelicanconf.py</code> file. because that is the only way I could get it to work! This post has been brought to you by the general awareness that you realize over time: &#8220;god help me, this file is&nbsp;a&nbsp;mess.&#8221;</p></p>
 <hr>
-<h4>If you already know what Pelican is, skip&nbsp;down</h4>
-<h2>What is&nbsp;Pelican?</h2>
-<p><a href="https://blog.getpelican.com/">Pelican</a> is the library that i use, if you didn&#8217;t know, to turn rambling nonsense typed into a notepad file into these pages automatically. Everything links to everything it should on other pages and if I add anything, all the old pages automatically are updated to stay in format with most current&nbsp;pages. </p>
-<p>Pagination, content archives, categories, tags (although these are not fully implemented here currently), and all the other kind of website stuff you have to figure out somehow when you write something into your notepad if you expect it to suddenly become a web&nbsp;page.</p>
-<p>What&#8217;s cool about pelican is that it is a type of website build tool called a <a href="">static site generator</a> I don&#8217;t have to maintain a server somewhere to dynamically render the page content for a users (who would all collectively have to wait for the server to figure out what to render to all of&nbsp;them).</p>
-<h2>Static Sites vs Web&nbsp;Applications</h2>
-<p>The main thing here is that instead of deciding what to show the user on a remote server, I&#8217;m doing it here on my home computer. When it goes to the server, there is nothing for the server to process and figure out in order to send something back to the user. It simply serves the page, as it&#8217;s already there to send. It doesn&#8217;t change. It&#8217;s a url path and a file that is associated with&nbsp;it.</p>
-<p>The website is the same for everyone who uses it. It doesn&#8217;t show some users one thing and another user another thing (like their login information or their profile or something where that is not possible to just be a simple, static&nbsp;document).</p>
-<p>But with a blog, unless you&#8217;ve lost an amount of integrity that is quite a bit more than the average web marketer loses by default in their career of being a scumbag with their approach to the Internet, you don&#8217;t have a reason to dynamically render a user experience of reading information. You just don&#8217;t. And if you do, you&nbsp;shouldn&#8217;t. </p>
-<p>You simply publish the information. That is the best most, efficient way to serve it. It makes sure it&#8217;s accessible to more&nbsp;people.</p>
+<h4>If you already know what Pelican is,&nbsp;skip&nbsp;down</h4>
+<h2>What&nbsp;is&nbsp;Pelican?</h2>
+<p><a href="https://blog.getpelican.com/">Pelican</a> is the library that i use, if you didn&#8217;t know, to turn rambling nonsense typed into a notepad file into these pages automatically. Everything links to everything it should on other pages and if I add anything, all the old pages automatically are updated to stay in format with most&nbsp;current&nbsp;pages. </p>
+<p>Pagination, content archives, categories, tags (although these are not fully implemented here currently), and all the other kind of website stuff you have to figure out somehow when you write something into your notepad if you expect it to suddenly become a&nbsp;web&nbsp;page.</p>
+<p>What&#8217;s cool about pelican is that it is a type of website build tool called a <a href="">static site generator</a> I don&#8217;t have to maintain a server somewhere to dynamically render the page content for a users (who would all collectively have to wait for the server to figure out what to render to all&nbsp;of&nbsp;them).</p>
+<h2>Static Sites vs&nbsp;Web&nbsp;Applications</h2>
+<p>The main thing here is that instead of deciding what to show the user on a remote server, I&#8217;m doing it here on my home computer. When it goes to the server, there is nothing for the server to process and figure out in order to send something back to the user. It simply serves the page, as it&#8217;s already there to send. It doesn&#8217;t change. It&#8217;s a url path and a file that is associated&nbsp;with&nbsp;it.</p>
+<p>The website is the same for everyone who uses it. It doesn&#8217;t show some users one thing and another user another thing (like their login information or their profile or something where that is not possible to just be a simple,&nbsp;static&nbsp;document).</p>
+<p>But with a blog, unless you&#8217;ve lost an amount of integrity that is quite a bit more than the average web marketer loses by default in their career of being a scumbag with their approach to the Internet, you don&#8217;t have a reason to dynamically render a user experience of reading information. You just don&#8217;t. And if you do,&nbsp;you&nbsp;shouldn&#8217;t. </p>
+<p>You simply publish the information. That is the best most, efficient way to serve it. It makes sure it&#8217;s accessible to&nbsp;more&nbsp;people.</p>
 <hr>
-<h2>Time For the __main__&nbsp;Event</h2>
-<p>I know, you came for the 300+ line settings file (not the politics). So let&#8217;s get down to business. I warn you, take a moment to prepare yourself and maybe sit down. The following is actual&nbsp;madness.</p>
-<p>I&#8217;m going to show you all the code before I explain what any of it does for&nbsp;effect.</p>
-<p>Just know that this file is supposed to be a series of value definitions that are used as a settings file and nothing&nbsp;more.</p>
+<h2>Time For the&nbsp;__main__&nbsp;Event</h2>
+<p>I know, you came for the 300+ line settings file (not the politics). So let&#8217;s get down to business. I warn you, take a moment to prepare yourself and maybe sit down. The following is&nbsp;actual&nbsp;madness.</p>
+<p>I&#8217;m going to show you all the code before I explain what any of it does&nbsp;for&nbsp;effect.</p>
+<p>Just know that this file is supposed to be a series of value definitions that are used as a settings file and&nbsp;nothing&nbsp;more.</p>
 <p>&#8230;</p>
 <p>This is a genre of post where the idea is to reveal intimately how embarrassing and disorganized some of your files can be.
-Who knows, maybe it&#8217;s a step towards the solutions to those&nbsp;problems.</p>
+Who knows, maybe it&#8217;s a step towards the solutions to&nbsp;those&nbsp;problems.</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="kn">from</span> <span class="nn">string</span> <span class="kn">import</span> <span class="n">Template</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
@@ -525,39 +531,38 @@ Who knows, maybe it&#8217;s a step towards the solutions to those&nbsp;problems.
 <span class="p">]</span>
 </code></pre></div>
 
-
-<h2>What Does This God-forsaken File Do&nbsp;Now?</h2>
-<p>In addition to several implemented features that just don&#8217;t work due to not being supported by the theme and not made to do so yet, these are things that are actually&nbsp;working:</p>
-<p>It formats the appearance of my menu links based on if there are an odd or even number of pages. Right now there is just &#8220;Home and Archive so it is formatted as &#8220;Home | Archive &#8230; if there were more pages to link, it would pair them in doubles like that, leaving the last one in the middle by itself if the total number is&nbsp;odd.</p>
-<p>It handles writing a new post from a specific template file where it will add all of the appropriate metadata to the <span class="caps">MD</span> file that gets built. It&#8217;s possible &#8216;all&#8217; is not the right word here. It gets the date, the slug, the author, and some basic things I want everything to&nbsp;have.</p>
-<h2>The Bad&nbsp;Parts</h2>
-<p>I think it is possible that some of the things I&#8217;ve written are probably redundancy of actions that are sometimes already easier to do within default Pelican once you learn how it works and what the options there&nbsp;are.</p>
-<p>Some of the stuff I don&#8217;t even really want to use anymore (a lot of clutter where I was figuring out how Pelican would work and trying different things), but the meat of it &#8212; the part that allows me to write a post without thinking about what to name the file or how to get the timestamp into the filename so that it persists longer than the system metadata &#8212; is a small part that I think is a great idea that is working&nbsp;well.</p>
-<p>I definitely have to cut out the stuff that I don&#8217;t need anymore because it&#8217;s not being used. And when code is that messy due to existing for multiple generation of tinkering with it in different ways and not cleaning it up, its not&nbsp;good.</p>
-<h2>One File to Rule&nbsp;Them</h2>
-<p>The hilarious thing is, even though there are three classes written to accomplish these things, all this and several utility functions are all just smashed into the <code>pelicanconf.py</code> file, because&#8230; when I tried to break it down into modules, it just was not working due to various errors including import hell and whatever&nbsp;else&#8230; </p>
-<p>I could just be stupid for not seeing the problem&#8230;, But things were just not working until I put everything back into the one file, so I did that to reduce the number of problems I was having at the&nbsp;moment.</p>
-<p>It&#8217;s possible that I just need to open a new branch, try to do the refactor again, and hopefully this time I will not err in the way that made things not&nbsp;work.</p>
+<h2>What Does This God-forsaken File&nbsp;Do&nbsp;Now?</h2>
+<p>In addition to several implemented features that just don&#8217;t work due to not being supported by the theme and not made to do so yet, these are things that are&nbsp;actually&nbsp;working:</p>
+<p>It formats the appearance of my menu links based on if there are an odd or even number of pages. Right now there is just &#8220;Home and Archive so it is formatted as &#8220;Home | Archive &#8230; if there were more pages to link, it would pair them in doubles like that, leaving the last one in the middle by itself if the total number&nbsp;is&nbsp;odd.</p>
+<p>It handles writing a new post from a specific template file where it will add all of the appropriate metadata to the <span class="caps"><span class="caps">MD</span></span> file that gets built. It&#8217;s possible &#8216;all&#8217; is not the right word here. It gets the date, the slug, the author, and some basic things I want everything&nbsp;to&nbsp;have.</p>
+<h2>The&nbsp;Bad&nbsp;Parts</h2>
+<p>I think it is possible that some of the things I&#8217;ve written are probably redundancy of actions that are sometimes already easier to do within default Pelican once you learn how it works and what the options&nbsp;there&nbsp;are.</p>
+<p>Some of the stuff I don&#8217;t even really want to use anymore (a lot of clutter where I was figuring out how Pelican would work and trying different things), but the meat of it &#8212; the part that allows me to write a post without thinking about what to name the file or how to get the timestamp into the filename so that it persists longer than the system metadata &#8212; is a small part that I think is a great idea that is&nbsp;working&nbsp;well.</p>
+<p>I definitely have to cut out the stuff that I don&#8217;t need anymore because it&#8217;s not being used. And when code is that messy due to existing for multiple generation of tinkering with it in different ways and not cleaning it up, its&nbsp;not&nbsp;good.</p>
+<h2>One File to&nbsp;Rule&nbsp;Them</h2>
+<p>The hilarious thing is, even though there are three classes written to accomplish these things, all this and several utility functions are all just smashed into the <code>pelicanconf.py</code> file, because&#8230; when I tried to break it down into modules, it just was not working due to various errors including import hell and&nbsp;whatever&nbsp;else&#8230; </p>
+<p>I could just be stupid for not seeing the problem&#8230;, But things were just not working until I put everything back into the one file, so I did that to reduce the number of problems I was having at&nbsp;the&nbsp;moment.</p>
+<p>It&#8217;s possible that I just need to open a new branch, try to do the refactor again, and hopefully this time I will not err in the way that made things&nbsp;not&nbsp;work.</p>
 <div class="codehilite"><pre><span></span><code><span class="k">One</span> <span class="k">File</span> <span class="k">to</span> <span class="n">Bind</span> <span class="n">Them</span><span class="p">.</span> 
 <span class="k">One</span> <span class="k">file</span> <span class="k">to</span> <span class="n">define</span> <span class="k">every</span> <span class="n">class</span> 
 <span class="k">function</span> <span class="k">and</span> <span class="k">value</span><span class="p">,</span> 
 <span class="k">and</span> <span class="k">in</span> <span class="n">the</span> <span class="n">darkness</span> <span class="n">instantiate</span><span class="p">,</span> 
 <span class="k">call</span><span class="p">,</span> <span class="k">and</span> <span class="k">reference</span> <span class="n">them</span> <span class="n">entirely</span> <span class="k">from</span> <span class="n n-Quoted">`__main__`</span><span class="p">.</span>
 </code></pre></div>
-</div>
+	</div>
 
-<div id="related-articles">
-    <a href="/2022/03/default-scrape-headers/" id="prev-neighbour">Default Scrape Headers
-        &raquo;</a>
-</div>
+	<div id="related-articles">
+		<a href="/2022/03/always-cook-your-headers-when-scraping/" id="prev-neighbour">Always Cook Your Headers When Scraping! &raquo;</a>
+	</div>
 
-        <hr>
-    </article>
 
-    <footer>
-        <p>This site is statically generated with Python.</p>
-    </footer>
-</div>
+			<hr>
+		</article>
+
+		<footer>
+			<p>This site is statically generated with Python.</p>
+		</footer>
+	</div>
 
 
 </body>

@@ -1,94 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Basic Metas -->
-    <meta charset="utf-8">
-    <title>Spam Twitter With Conspiracies Bot | shaenr</title>
-    <meta content="Check out this conspiracy spamming Twitter bot I made. Verif1edFacts on Twitter Every hour on a cronjob it runs a simple Python script that scrapes verifiedfacts.org, which is actually a pretty old site that was making fun of this conspiracy stuff …" name="description">
-    <meta content="shaenr" name="author">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-<!-- Twitter Cards and Open Graph -->
-<meta content="summary" name="twitter:card">
-<!-- 	<meta name="twitter:creator" content=""> -->
-<meta content="shaenr.github.io" name="twitter:domain">
-<!-- 	<meta name="twitter:site" content=""> -->
-<meta content="Spam Twitter With Conspiracies Bot" property="og:title">
-<meta content="Check out this conspiracy spamming Twitter bot I made. Verif1edFacts on Twitter Every hour on a cronjob it runs a simple Python script that scrapes verifiedfacts.org, which is actually a pretty old site that was making fun of this conspiracy stuff …" property="og:description">
-<meta content="../../../images/icons/avatar.png" property="og:image">
-<meta content="article" property="og:type">
-<meta content="../../../2021/04/check-out-Verif1edFacts-bot/" property="og:url">
+	<!-- Basic Metas -->
+	<meta charset="utf-8">
+	<title>Spam Twitter With Conspiracies Bot | shaenr</title>
+	<meta name="description" content="Check out this conspiracy spamming Twitter bot I made. Verif1edFacts on Twitter Every hour on a cronjob it runs a simple Python script that scrapes verifiedfacts.org, which is actually a pretty old site that was making fun of this conspiracy stuff …">
+	<meta name="author" content="shaenr">
+	<link rel="author" href=""/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Stylesheets and Web Fonts -->
-    <link href="/theme/style.min.css" rel="stylesheet">
-    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css"
-          integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" rel="stylesheet">
+	<!-- Twitter Cards and Open Graph -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:creator" content="">
+	<meta name="twitter:domain" content="shaenr.github.io">
+	<meta name="twitter:site" content="">
+	<meta property="og:title" content="Spam Twitter With Conspiracies Bot">
+	<meta property="og:description" content="Check out this conspiracy spamming Twitter bot I made. Verif1edFacts on Twitter Every hour on a cronjob it runs a simple Python script that scrapes verifiedfacts.org, which is actually a pretty old site that was making fun of this conspiracy stuff …">
+	<meta property="og:image" content="../../../images/icons/avatar.png">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="../../../2021/04/check-out-Verif1edFacts-bot/">
 
-    <!-- Favicons -->
-    <link href="/images/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-    <link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-    <link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-    <meta content="#FF8000" name="theme-color">
-    <meta content="#FF8000" name="msapplication-TileColor">
+	<!-- Stylesheets and Web Fonts -->
+	<link href="/theme/style.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!--[if lt IE 9]>
-    <script src="/theme/js/html5shiv.min.js"></script>
-    <script src="/theme/js/respond.min.js"></script><![endif]-->
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/images/icons/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="/images/icons/favicon-32x32.png" sizes="32x32">
+	<meta name="theme-color" content="">
+
+	<meta name="msapplication-TileColor" content="">
+	<meta name="msapplication-TileImage" content="/images/icons/mstile-144x144.png">
+	<meta name="msapplication-square70x70logo" content="/images/icons/mstile-small.png">
+	<meta name="msapplication-square150x150logo" content="/images/icons/mstile-medium.png">
+	<meta name="msapplication-wide310x150logo" content="/images/icons/mstile-wide.png">
+	<meta name="msapplication-square310x310logo" content="/images/icons/mstile-large.png">
+
+	<!--[if lt IE 9]>
+	<script src="/theme/js/html5shiv.min.js"></script>
+	<script src="/theme/js/respond.min.js"></script>
+	<![endif]-->
 </head>
 
 <body>
-<div class="container">
-    <aside>
-        <a href="/"><img alt="Site Avatar" id="avatar" src="/images/icons/avatar.png"></a>
-        <div id="name"><a href="/">shaenr</a></div>
-        <div id="bio">Python/JavaScript<br>Command Line Cowboy<br>San Antonio, TX</div>
+	<div class="container">
+		<aside>
+			<a href="/"><img id="avatar" alt="Site Avatar" src="/images/icons/avatar.png"></a>
+			<div id="name"><a href="/">shaenr</a></div>
+			<div id="bio">Python/JavaScript<br>Command Line Cowboy<br>San Antonio, TX</div>
 
-        <div id="sidebar-links">
+			<div id="sidebar-links">
+				<a href="/">Home</a>&nbsp;|&nbsp;<a href="/archive/">Archive</a>
+			</div>
 
-            <a href="/">Home</a>&nbsp;|&nbsp;<a href="/archive/">Archive</a>
+			<div id="social">
+				<a href="/atom.xml" title="Atom Feed" class="icon fa fa-feed"></a>
+				<a href="https://github.com/shaenr" title="GitHub" class="icon fa fa-github"></a>
+				<a href="https://hackers.town/@shaen" title="Mastodon" class="icon fa fa-mastodon"></a>
+				<a href="https://divsel.neocities.org" title="Neocities" class="icon fa fa-share"></a>
+			</div>
 
-        </div>
+			<hr id="sidebar-divider">
+		</aside>
 
-        <div id="social">
-            <a class="icon fa fa-feed" href="/atom.xml" title="Atom Feed"></a>
-            <a class="icon fa fa-github" href="https://github.com/shaenr" title="GitHub"></a>
-            <a class="icon fa fa-mastodon" href="https://hackers.town/@shaen" title="Mastodon"></a>
-            <a class="icon fa fa-share" href="https://divsel.neocities.org" title="Neocities"></a>
-        </div>
-
-        <hr id="sidebar-divider">
-    </aside>
-
-    <article>
-<h1 class="title"><a href="/2021/04/check-out-Verif1edFacts-bot/" title="Permalink to Spam Twitter With Conspiracies Bot">Spam Twitter With Conspiracies&nbsp;Bot</a></h1>
-<time class="date" datetime="2021-04-06 00:00:00-05:00">April 06, 2021</time>
-<div class="content">
-    <p>Check out this conspiracy spamming Twitter bot I&nbsp;made.</p>
+		<article>
+	<h1 class="title"><a href="/2021/04/check-out-Verif1edFacts-bot/" title="Permalink to Spam Twitter With Conspiracies Bot">Spam Twitter With Conspiracies&nbsp;Bot</a></h1>
+	<time class="date" datetime="2021-04-06 00:00:00-05:00">April 06, 2021</time>
+	<div class="content">
+		<p>Check out this conspiracy spamming Twitter bot I&nbsp;made.</p>
 <h2><a href="https://twitter.com/Verif1edFacts">Verif1edFacts on&nbsp;Twitter</a></h2>
 <p>Every hour on a cronjob it runs a simple Python script that scrapes <a href="http://www.verifiedfacts.org/">verifiedfacts.org</a>, which is actually a pretty old site that was making fun of this conspiracy stuff long before it got out of&nbsp;hand.</p>
 <p>I like to think it presents the ideas as ridiculous as they actually are &#8212; just regurgitated out nonsense by a&nbsp;program.</p>
-<p><a href="https://twitter.com/Verif1edFacts"><img alt="Verif1edFacts Bot" src="../../../images/vf.png"></a></p>
 <p>I can&#8217;t take full credit&#8230; All I did was scrape the site and format the long articles into posts to Twittter using their <span class="caps">API</span> to do it. My random hash tagging of often poorly chosen words could use some&nbsp;improvement.</p>
 <p>There is another feature that, after analyzing how the endpoints of <a href="http://www.verifiedfacts.org/">verifiedfacts.org</a> actually work, I was able to generate articles about specific topics and not just random ones. I even have a google imaage scraper bit that grabs an image to go with&nbsp;it. </p>
 <p>But&#8230; too often these images don&#8217;t work well enough to use them&nbsp;yet.</p>
 <hr>
 <p>Here&#8217;s the repo. It&#8217;s pretty simple. I may or may not improve&nbsp;it.</p>
 <p><a href="https://github.com/shaenr/ConspiracyTwit">ConspiracyTwit on&nbsp;GitHub</a></p>
-<p>At its core, it is just spamming nonsense &#8212; what I would hope would be obvious nonsense to people, but which isn&#8217;t always. Maybe its not worth improving something like this to seem more life like just for the&nbsp;lulz&#8230;</p>
-</div>
+<p>At its core, it is just spamming nonsense &#8212; what I would hope would be obvious nonsense to people, but which isn&#8217;t always. Maybe its not worth improving something like this to seem more life like just for the&nbsp;lulz. </p>
+<hr>
+<p>By the&nbsp;way&#8230;</p>
+<p>I should mention that It&#8217;s been about a year since I made this page and abandoned it. So today, this update comes complete with a rewrite of my <a href="/about">About</a> page to explain why I feel that happened. Check that out,&nbsp;too.</p>
+<p>See ya round,&nbsp;Internet.</p>
+	</div>
 
-<div id="related-articles">
-    <a href="/2021/04/feels-good-to-improve/" id="next-neighbour">&laquo; Feels Good to Improve</a>
-    <a href="/2020/05/client-side-user-input/" id="prev-neighbour">Anything From the Client Side is User Input
-        &raquo;</a>
-</div>
+	<div id="related-articles">
+		<a href="/2021/04/feels-good-to-improve/" id="next-neighbour">&laquo; Feels Good to Improve</a>
+		<a href="/2020/05/client-side-user-input/" id="prev-neighbour">Anything From the Client Side is User Input &raquo;</a>
+	</div>
 
-        <hr>
-    </article>
 
-    <footer>
-        <p>This site is statically generated with Python.</p>
-    </footer>
-</div>
+			<hr>
+		</article>
+
+		<footer>
+			<p>This site is statically generated with Python.</p>
+		</footer>
+	</div>
 
 
 </body>
