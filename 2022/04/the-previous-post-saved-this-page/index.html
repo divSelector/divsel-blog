@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Basic Metas -->
+	<meta charset="utf-8">
+	<title>The Previous Post Saved This Page | shaenr</title>
+	<meta name="description" content="I haven’t posted for a month despite having worked on a number of things. The reason why is I lost the ability to generate the site when I lost the markdown files for the content posts, all three of the new …">
+	<meta name="author" content="shaenr">
+	<link rel="author" href=""/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Twitter Cards and Open Graph -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:creator" content="">
+	<meta name="twitter:domain" content="shaenr.github.io">
+	<meta name="twitter:site" content="">
+	<meta property="og:title" content="The Previous Post Saved This Page">
+	<meta property="og:description" content="I haven’t posted for a month despite having worked on a number of things. The reason why is I lost the ability to generate the site when I lost the markdown files for the content posts, all three of the new …">
+	<meta property="og:image" content="../../../images/icons/avatar.png">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="../../../2022/04/the-previous-post-saved-this-page/">
+
+	<!-- Stylesheets and Web Fonts -->
+	<link href="/theme/style.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/images/icons/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="/images/icons/favicon-32x32.png" sizes="32x32">
+	<meta name="theme-color" content="">
+
+	<meta name="msapplication-TileColor" content="">
+	<meta name="msapplication-TileImage" content="/images/icons/mstile-144x144.png">
+	<meta name="msapplication-square70x70logo" content="/images/icons/mstile-small.png">
+	<meta name="msapplication-square150x150logo" content="/images/icons/mstile-medium.png">
+	<meta name="msapplication-wide310x150logo" content="/images/icons/mstile-wide.png">
+	<meta name="msapplication-square310x310logo" content="/images/icons/mstile-large.png">
+
+	<!--[if lt IE 9]>
+	<script src="/theme/js/html5shiv.min.js"></script>
+	<script src="/theme/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="container">
+		<aside>
+			<a href="/"><img id="avatar" alt="Site Avatar" src="/images/icons/avatar.png"></a>
+			<div id="name"><a href="/">shaenr</a></div>
+			<div id="bio">Python/JavaScript<br>Command Line Cowboy<br>San Antonio, TX</div>
+
+			<div id="sidebar-links">
+				<a href="/">Home</a>&nbsp;|&nbsp;<a href="/archive/">Archive</a>
+			</div>
+
+			<div id="social">
+				<a href="/atom.xml" title="Atom Feed" class="icon fa fa-feed"></a>
+				<a href="https://github.com/shaenr" title="GitHub" class="icon fa fa-github"></a>
+				<a href="https://hackers.town/@shaen" title="Mastodon" class="icon fa fa-mastodon"></a>
+				<a href="https://divsel.neocities.org" title="Neocities" class="icon fa fa-share"></a>
+			</div>
+
+			<hr id="sidebar-divider">
+		</aside>
+
+		<article>
+	<h1 class="title"><a href="/2022/04/the-previous-post-saved-this-page/" title="Permalink to The Previous Post Saved This Page">The Previous Post Saved This&nbsp;Page</a></h1>
+	<time class="date" datetime="2022-04-10 19:11:00-05:00">April 10, 2022</time>
+	<div class="content">
+		<p>I haven&#8217;t posted for a month despite having worked on a number of things. The reason why is I lost the ability to generate the site when I lost the markdown files for the content posts, all three of the new classes I showed off in the <a href="../../../2022/03/over-300-lines-of-logic-in-pelicanconfpy/">previous post</a>, and pretty much every package, lib, and environment configuration that made the site build the way it&nbsp;did.</p>
+<h2>Losing Data Needed to&nbsp;Build</h2>
+<p>I lost data on the <span class="caps">PC</span> I had been working on the project from. It would have been all safely tucked away into the repo on github if not for some concern for uploading draft files of things I had been working on finishing but didn&#8217;t want to publish anywhere yet hadn&#8217;t made me decide to remove the site generator from the repository that hosts this page. I had planned to make a separate repo for the generator, but I didn&#8217;t. And when the file loss was complete, a good lot of work would need to be done to get the site building&nbsp;again.</p>
+<ol>
+<li>
+<p>Firstly I had to reinstall pelican and the theme and all its plugins, including sass and the list goes&nbsp;on. </p>
+</li>
+<li>
+<p>I had to find old repos of old versions of the pelican site and scrap together the settings for the basic templates in this&nbsp;theme.</p>
+</li>
+<li>
+<p>I had to rewrite markdown files from every <span class="caps">HTML</span> post I did not have an older backup of; otherwise it would never dynamically adjust to new pages&nbsp;again.</p>
+</li>
+<li>
+<p>And at the end of all of it, <em>if I had not posted the full <code>pelicanconf.py</code> file</em> like I did in that <a href="../../../2022/03/over-300-lines-of-logic-in-pelicanconfpy/">last post</a>, a lot of the newer automated functionality would be&nbsp;gone. </p>
+</li>
+</ol>
+<p>It took me several weeks just to want to consider working on this. And I finally did it so I can write. The next post will be about my BandCamp downloading&nbsp;utility.</p>
+<p>But before moving&nbsp;on&#8230;</p>
+<h2>Concerns With Statically Generating&nbsp;Sites</h2>
+<p>I now realize that while the site may not depend on a server configuration to make it render, it does still depend somewhat on the configuration on the local machine to continue building on&nbsp;it.</p>
+<p>Not just the pages that are generated, but the content files that result in the pages, and all other files and folders in the static generator have to be maintained somewhere remote where they can be pulled down again if&nbsp;needed.</p>
+<p>This will no longer be an issue as I will be uploading all of it to the same place. If you want to find my potentially forgotten-about drafts in a folder somewhere in some directory, go for&nbsp;it.</p>
+<p>I&#8217;ll add the folder to an upload ignore config one day if I need&nbsp;to.</p>
+	</div>
+
+	<div id="related-articles">
+		<a href="/2022/03/over-300-lines-of-logic-in-pelicanconfpy/" id="prev-neighbour">Permalink to Over 300 Lines of Logic in pelicanconf.py &raquo;</a>
+	</div>
+
+
+			<hr>
+		</article>
+
+		<footer>
+			<p>This site is statically generated with Python.</p>
+		</footer>
+	</div>
+
+
+</body>
+</html>
