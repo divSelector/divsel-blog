@@ -6,14 +6,12 @@
 	<title>{% block title %}{% endblock %}</title>
 	<meta name="description" content="{% block description %}{% endblock %}">
 	<meta name="author" content="{{ SITE_AUTHOR }}">
-	<link rel="author" href="{{ GOOGLE_PLUS_URL }}"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	{% block meta %}{% endblock %}
 
 	<!-- Stylesheets and Web Fonts -->
 	{% assets filters="scss, cssmin", output="style.min.css", "pneumatic.scss", "pygments.css" %}
-	<link href="/{{ ASSET_URL }}" rel="stylesheet">
+	<link href="{{ ASSET_ROOT }}{{ ASSET_URL }}" rel="stylesheet">
 	{% endassets %}
 	{% if GOOGLE_FONTS %}
 	<link href="https://fonts.googleapis.com/css?family={{ GOOGLE_FONTS | join('|') | replace(' ', '+') }}" rel="stylesheet" type="text/css">
@@ -27,16 +25,15 @@
 	{% endif %}
 
 	<!-- Favicons -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/{{ ICONS_PATH }}/apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="/{{ ICONS_PATH }}/favicon-16x16.png" sizes="16x16">
-	<link rel="icon" type="image/png" href="/{{ ICONS_PATH }}/favicon-32x32.png" sizes="32x32">
-	<meta name="theme-color" content="{{ THEME_COLOR }}">
-
-	<meta name="msapplication-TileColor" content="{{ THEME_COLOR }}">
-	<meta name="msapplication-TileImage" content="/{{ ICONS_PATH }}/mstile-144x144.png">
-	{% for name, size in (('square70x70', 'small'), ('square150x150', 'medium'), ('wide310x150', 'wide'), ('square310x310', 'large')) %}
-	<meta name="msapplication-{{ name }}logo" content="/{{ ICONS_PATH }}/mstile-{{ size }}.png">
-	{% endfor %}
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ ASSET_ROOT }}{{ ICONS_PATH }}/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ ASSET_ROOT }}{{ ICONS_PATH }}/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ ASSET_ROOT }}{{ ICONS_PATH }}/favicon-16x16.png">
+	<link rel="manifest" href="{{ ASSET_ROOT }}{{ ICONS_PATH }}/site.webmanifest">
+	<link rel="mask-icon" href="{{ ASSET_ROOT }}{{ ICONS_PATH }}/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="{{ ASSET_ROOT }}{{ ICONS_PATH }}/favicon.ico">
+	<meta name="msapplication-TileColor" content="#603cba">
+	<meta name="msapplication-config" content="{{ ASSET_ROOT }}{{ ICONS_PATH }}/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
 
 	<!--[if lt IE 9]>
 	<script src="/theme/js/html5shiv.min.js"></script>
@@ -47,20 +44,27 @@
 <body>
 	<div class="container">
 		<aside>
-			<a href="/"><img id="avatar" alt="Site Avatar" src="/{{ ICONS_PATH }}/avatar.png"></a>
-			<div id="name"><a href="/">{{ SITENAME }}</a></div>
+			<!-- Visible at Mobile -->
+			<a href="{{ ASSET_ROOT }}"><img id="avatar-mobile" alt="Site Avatar" src="{{ ASSET_ROOT }}{{ ICONS_PATH }}/oldavatar.png"></a>
+			<div id="name"><a href="{{ ASSET_ROOT }}">{{ SITENAME }}</a></div>
 			<div id="bio">{{ BIO_TEXT }}</div>
 
-			{% if SIDEBAR_LINKS %}
 			<div id="sidebar-links">
-				{{ SIDEBAR_LINKS | join("&nbsp;|&nbsp;") }}
+				<ul>
+					<li><a href="/blog">Home</a></li>
+					<li><a href="/blog/archive/">Archive</a></li>
+					<li><a href="/blog/tags/">Tags</a></li>
+				</ul>
 			</div>
-			{% endif %}
+	
+
+			<!-- Visible at Desktop Viewport -->
+			<a href="{{ ASSET_ROOT }}"><img id="avatar" alt="Site Avatar" src="{{ ASSET_ROOT }}{{ ICONS_PATH }}/oldavatar.png"></a>
 
 			{% if SOCIAL_ICONS %}
 			<div id="social">
 				{% for link, title, icon in SOCIAL_ICONS %}
-				<a href="{{ link }}" title="{{ title }}" class="icon fa {{ icon }}"></a>
+				<a href="{{ link }}" rel="me" title="{{ title }}" class="icon fa {{ icon }}"></a>
 				{% endfor %}
 			</div>
 			{% endif %}
@@ -69,6 +73,7 @@
 		</aside>
 
 		<article>
+			{% block content_title %}{% endblock %}
 			{% block content %}{% endblock %}
 			<hr>
 		</article>
