@@ -77,7 +77,7 @@ EXTRA_PATH_METADATA = {'extra/%s' % file: {'path': file} for file in extras}  # 
 
 # PLUGINS
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['assets', 'neighbors', 'render_math', 'optimize_images']
+PLUGINS = ['assets', 'neighbors', 'optimize_images']
 
 # ASSETS PLUGIN
 ASSET_SOURCE_PATHS = ['static']
