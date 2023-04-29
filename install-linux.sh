@@ -1,5 +1,3 @@
-git clone https://github.com/divSelector/divsel-blog.git
-cd divsel-blog
 python3 -m pip install virtualenv
 python3 -m virtualenv venv
 . venv/bin/activate
